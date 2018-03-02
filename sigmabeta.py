@@ -12,7 +12,7 @@ def getbeta(sigmar,sigmatheta,sigmaphi):
         print "Negative sigmaphi not allowed"
         sys.exit()
     sigmat = np.sqrt(sigmatheta**2 + sigmaphi**2)
-    return 1.0 - (sigmar/sigmat)**2
+    return 1.0 - 0.5*(sigmat/sigmar)**2
     
 def sigmabeta(sigmar,sigmatheta,sigmaphi,esigmar,esigmatheta,esigmaphi):
     beta0 = getbeta(sigmar,sigmatheta,sigmaphi)
